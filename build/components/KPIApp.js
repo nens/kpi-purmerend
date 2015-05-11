@@ -139,14 +139,14 @@ var KPIHisto = React.createClass({
         var parseDate = d3.time.format("%m/%d/%Y").parse;
 
         if(period) {
-            var startYear = moment('2014').subtract(period, 'years');    
+            var startYear = moment('2015').subtract(period, 'years');    
         } else {
-            var startYear = moment('2014').subtract(5, 'years');    
+            var startYear = moment('2015').subtract(6, 'years');    
         }
 
         var x = d3.time.scale()
             .range([0, width])
-            .domain([startYear.toDate(), moment('12-30-2014').toDate()]).clamp(true);
+            .domain([startYear.toDate(), moment('12-30-2015').toDate()]).clamp(true);
 
         var y = d3.scale.linear()
             .range([height, 1]);
