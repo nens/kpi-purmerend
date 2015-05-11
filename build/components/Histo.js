@@ -105,7 +105,12 @@ var Histo = React.createClass({
             lastValue = Math.round(values[values.length - 1].Abs) || 0;
             tooltipString = 'Aantal';
         } else {
-            lastValue = Math.round(values[values.length - 1].Score) || 0;
+            try {
+              lastValue = Math.round(values[values.length - 1].Score) || 0;
+            } catch(error) {
+              lastValue = 0;
+            }
+            
             tooltipString = 'PI';
         }
        

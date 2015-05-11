@@ -40,7 +40,7 @@ var width = 500, height = 600;
 var numberFormat = d3.format(".2f");
 var projection = d3.geo.mercator()
        .center([config.lat, config.lon]) // Coords in 3857 projection
-       .scale(99000);
+       .scale(170000);
 var path = d3.geo.path().projection(projection);
 var svg;
 
@@ -71,16 +71,16 @@ var Map = React.createClass({
 	        		features: json.features
 	        	});
 	            json.features.map(function(feature) {
-	                feature.key = feature.properties.Name;
+	                feature.key = feature.properties.WK_NAAM;
 	                svg.append("path")
 		                .datum(feature)
 		                .attr("d", path)
-		                .attr("class", 'stadsdeel ' + feature.properties.Name)
+		                .attr("class", 'stadsdeel ' + feature.properties.WK_NAAM)
 		                .style("stroke", function() { return "white"; })
 		                .style("cursor", function() { return "pointer"; })
 		                .style("stroke-width", function() { return 1.2; })
 		                .on('click', function() {
-		                    self.props.selectStadsdeel(feature.properties.Name);
+		                    self.props.selectStadsdeel(feature.properties.WK_NAAM);
 		                });
 	            });
 	            svg.selectAll("text")
@@ -88,7 +88,7 @@ var Map = React.createClass({
 	                .enter()
 	                .append("svg:text")
 	                .text(function(d){
-	                    return d.properties.Name;
+	                    return d.properties.WK_NAAM;
 	                })
 	                .attr("x", function(d){
 	                    return path.centroid(d)[0];
@@ -105,7 +105,7 @@ var Map = React.createClass({
 	                svgWijken.append("path")
 	                .datum(feature.geometry)
 	                .attr("d", path)
-	                .attr("class", 'stadsdeel ' + feature.properties.Name)
+	                .attr("class", 'stadsdeel ' + feature.properties.WK_NAAM)
 	                .style("stroke", function() { return "white"; })
 	                .style("cursor", function() { return "pointer"; })
 	                .style("stroke-width", function() { return 1.2; })

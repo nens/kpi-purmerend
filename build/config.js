@@ -2,9 +2,9 @@ var config = {};
 
 config.dashboardName = 'Purmerend';
 config.cityName = 'Purmerend';
-config.cityGeojsonFile = 'stadsdelen_purmerend.geojson';
-config.neighborhoodsGeojsonFile = 'purmerend_4326_simple.geojson';
-config.lat = 4.9458;
+config.cityGeojsonFile = 'wijken_purmerend.geojson';
+config.neighborhoodsGeojsonFile = 'buurten_purmerend.geojson';
+config.lat = 5.05;
 config.lon = 52.4998;
 
 config.csvFileKPI = 'KPI.csv';
