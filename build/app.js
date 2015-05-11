@@ -71,7 +71,7 @@ var App = React.createClass({
   getInitialState: function() {
   	return {
       'pis': [],
-  		'currentDate': 5
+  		'currentDate': 6
   	};
   },
   selectNewDate: function(date) {
@@ -269,7 +269,7 @@ var PeriodSelection = React.createClass({
     },	
 	render: function() {
 		var currentDate = this.props.currentDate;
-		var now = moment('2014');
+		var now = moment('2015');
 		var formattedDate = now.subtract(currentDate, 'year').format('MMM/YYYY');
 		return (
 			<div>
@@ -282,7 +282,7 @@ var PeriodSelection = React.createClass({
 				</li>
 			  </ul>                    
         <p onClick={this.handleToggle} style={{cursor:'pointer'}}>
-        	Periode <span className="period">{formattedDate}</span>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;<span className="period">Dec/2014</span>	                      	
+        	Periode <span className="period">{formattedDate}</span>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;<span className="period">Mei/2015</span>	                      	
         </p>
       </div>
 		);

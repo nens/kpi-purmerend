@@ -124,9 +124,9 @@ var Histo = React.createClass({
         var parseDate = d3.time.format("%m/%d/%Y").parse;
 
         if(period) {
-            startYear = moment('2014').subtract(period, 'years');    
+            startYear = moment('2015').subtract(period, 'years');    
         } else {
-            startYear = moment('2014').subtract(5, 'years');    
+            startYear = moment('2015').subtract(6, 'years');    
         }
         
         var x = d3.time.scale()
