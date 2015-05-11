@@ -4,7 +4,7 @@ config.dashboardName = 'Purmerend';
 config.cityName = 'Purmerend';
 config.cityGeojsonFile = 'wijken_purmerend.geojson';
 config.neighborhoodsGeojsonFile = 'buurten_purmerend.geojson';
-config.lat = 5.05;
+config.lat = 5.02;
 config.lon = 52.4998;
 
 config.csvFileKPI = 'KPI.csv';

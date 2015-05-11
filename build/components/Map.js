@@ -40,7 +40,7 @@ var width = 500, height = 600;
 var numberFormat = d3.format(".2f");
 var projection = d3.geo.mercator()
        .center([config.lat, config.lon]) // Coords in 3857 projection
-       .scale(170000);
+       .scale(270000);
 var path = d3.geo.path().projection(projection);
 var svg;
 
