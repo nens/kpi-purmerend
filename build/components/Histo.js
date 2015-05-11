@@ -131,7 +131,7 @@ var Histo = React.createClass({
         
         var x = d3.time.scale()
             .range([0, width])
-            .domain([startYear.toDate(), moment('12-30-2014').toDate()]).clamp(true);
+            .domain([startYear.toDate(), moment('12-12-2015').toDate()]).clamp(true);
 
         var y = d3.scale.linear()
             .range([height, 1]);

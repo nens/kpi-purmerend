@@ -190,7 +190,7 @@ var PlanningApp = React.createClass({
                                 <i style={{cursor: 'pointer'}} className="fa fa-info-circle" />
                             </ModalTrigger>                            
                             <a target="_blank"
-                               href="https://demo.lizard.net/map/topography,waterchain,message/point@52.3826,5.2477,12/Jan,01,2013-Jan,01,2014">
+                               href="https://demo.lizard.net/map/topography,waterchain,message/area/@52.5068,4.9593,13/Jan,01,2014-Jan,01,2015">
                                <OverlayTrigger placement="bottom" overlay={<Tooltip><strong>Bekijken in Lizard</strong></Tooltip>}>                               
                                    <img width="25" style={{margin:'0px 0px 5px 5px'}} src={iconLizard} />
                                </OverlayTrigger>
