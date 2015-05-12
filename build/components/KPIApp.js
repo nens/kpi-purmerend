@@ -245,14 +245,17 @@ var KPIHisto = React.createClass({
             .on("mousemove", mousemove);
 
         function mousemove() {
-          var x0 = x.invert(d3.mouse(this)[0]),
-              i = bisectDate(values, x0, 1),
-              d0 = values[i - 1],
-              d1 = values[i],
-              d = x0 - d0.Date > d1.Date - x0 ? d1 : d0;
+            try {
+              var x0 = x.invert(d3.mouse(this)[0]),
+                  i = bisectDate(values, x0, 1),
+                  d0 = values[i - 1],
+                  d1 = values[i],
+                  d = x0 - d0.Date > d1.Date - x0 ? d1 : d0;
 
-          focus.attr("transform", "translate(" + x(parseDate(d.Date)) + "," + y(d.Value) + ")");
-          focus.select("text").text(d.Value);
+              focus.attr("transform", "translate(" + x(parseDate(d.Date)) + "," + y(d.Value) + ")");
+              focus.select("text").text(d.Value);                
+            } catch(error) {
+            }
         }
         
         var classesTitlebar = cx({

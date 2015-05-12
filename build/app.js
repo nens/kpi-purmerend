@@ -100,6 +100,10 @@ var App = React.createClass({
                 if(item.Value != 'NULL') return item;
               });
 
+              values = values.filter(function(value) {
+                if(value.Gebied === config.cityName) return value;
+              });
+
               return {
                   'key': obj.key, 
                   'value': values[values.length - 1].Value
@@ -118,6 +122,7 @@ var App = React.createClass({
       toestandValue = _.where(self.state.pis, {key: "TOESTAND"})[0].value;
       omgevingValue = _.where(self.state.pis, {key: "OMGEVING"})[0].value;
       gebruikValue = _.where(self.state.pis, {key: "GEBRUIK"})[0].value;
+
     }
     
     return (
